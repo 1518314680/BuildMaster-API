@@ -1,6 +1,6 @@
 package com.buildmaster.controller;
 
-import com.buildmaster.model.Component;
+import com.buildmaster.entity.Component;
 import com.buildmaster.service.ComponentService;
 import com.buildmaster.service.ComponentImportService;
 import com.buildmaster.service.PriceUpdateScheduler;

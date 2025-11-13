@@ -1,7 +1,7 @@
 package com.buildmaster.service;
 
-import com.buildmaster.model.BuildConfig;
-import com.buildmaster.model.Component;
+import com.buildmaster.entity.BuildConfig;
+import com.buildmaster.entity.Component;
 import com.buildmaster.repository.BuildConfigRepository;
 import com.buildmaster.repository.ComponentRepository;
 import lombok.RequiredArgsConstructor;

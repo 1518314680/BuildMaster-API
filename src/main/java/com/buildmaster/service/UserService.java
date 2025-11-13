@@ -2,7 +2,7 @@ package com.buildmaster.service;
 
 import com.buildmaster.dto.RegisterRequest;
 import com.buildmaster.dto.UserDTO;
-import com.buildmaster.model.User;
+import com.buildmaster.entity.User;
 import com.buildmaster.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

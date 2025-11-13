@@ -1,6 +1,6 @@
 package com.buildmaster.controller;
 
-import com.buildmaster.model.BuildConfig;
+import com.buildmaster.entity.BuildConfig;
 import com.buildmaster.service.BuildConfigService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

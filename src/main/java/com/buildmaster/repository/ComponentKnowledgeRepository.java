@@ -1,6 +1,6 @@
 package com.buildmaster.repository;
 
-import com.buildmaster.model.ComponentKnowledge;
+import com.buildmaster.entity.ComponentKnowledge;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

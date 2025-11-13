@@ -1,4 +1,4 @@
-package com.buildmaster.model;
+package com.buildmaster.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

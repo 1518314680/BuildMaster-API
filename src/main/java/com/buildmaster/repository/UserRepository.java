@@ -1,6 +1,6 @@
 package com.buildmaster.repository;
 
-import com.buildmaster.model.User;
+import com.buildmaster.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

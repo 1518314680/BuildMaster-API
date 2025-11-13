@@ -1,6 +1,6 @@
 package com.buildmaster.repository;
 
-import com.buildmaster.model.ConversationHistory;
+import com.buildmaster.entity.ConversationHistory;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

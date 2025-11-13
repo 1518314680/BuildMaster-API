@@ -1,6 +1,6 @@
 package com.buildmaster.service;
 
-import com.buildmaster.model.Component;
+import com.buildmaster.entity.Component;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

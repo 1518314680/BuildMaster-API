@@ -1,6 +1,6 @@
 package com.buildmaster.service;
 
-import com.buildmaster.model.Component;
+import com.buildmaster.entity.Component;
 import com.buildmaster.repository.ComponentRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,7 +1,7 @@
 package com.buildmaster.controller;
 
 import com.buildmaster.dto.*;
-import com.buildmaster.model.User;
+import com.buildmaster.entity.User;
 import com.buildmaster.service.EmailService;
 import com.buildmaster.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;

@@ -14,7 +14,7 @@
     <groupId>com.buildmaster</groupId>
     <artifactId>BuildMaster-API</artifactId>
     <version>1.0.0</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>BuildMaster API</name>
 
     <properties>

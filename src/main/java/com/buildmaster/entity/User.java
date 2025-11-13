@@ -1,4 +1,4 @@
-package com.buildmaster.model;
+package com.buildmaster.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
