@@ -1,0 +1,112 @@
+server:
+  port: 8080
+
+# 文件上传配置
+file:
+  upload:
+    path: uploads/avatars
+
+spring:
+  profiles:
+    active: local
+  server:
+    encoding: #防止大模型调用返回中文乱码
+      enabled: true
+      force: true
+      charset: UTF-8
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  datasource:
+    url: jdbc:mysql://localhost:3306/buildmaster?serverTimezone=UTC
+    username: root
+    password: asd962464..
+  jpa:
+    hibernate:
+      ddl-auto: update
+  redis:
+    host: localhost
+    port: 6379
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 1518314680@qq.com
+    password: yizyjiyrhfmpffei  # QQ邮箱授权码，需要在QQ邮箱设置中获取
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+  # MongoDB配置 (用于存储对话历史)
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/buildmaster_ai
+      database: buildmaster_ai
+  # Spring AI 配置
+  ai:
+    dashscope:
+      api-key: apikey
+      base-url: baseurl
+      chat:
+        options:
+          model: Qwen
+#    ollama:
+#      base-url: http://localhost:11434
+#      chat:
+#        model: llama3.1  # 默认使用llama3.1模型，可以根据需要更改
+#        options:
+#          temperature: 0.7
+#          top-p: 0.9
+#          num-predict: 2048
+#    vectorstore:
+#      milvus:
+#        client:
+#          host: localhost
+#          port: 19530
+#        database-name: buildmaster
+#        collection-name: component_knowledge
+#        embedding-dimension: 768
+#        index-type: IVF_FLAT
+#        metric-type: L2
+
+#ai:
+#  provider: deepseek
+#  api-key: ${AI_API_KEY:your-key-here}
+
+# 京东开放平台配置（可选）
+# 申请地址: https://union.jd.com/openplatform/
+jd:
+  api:
+    enabled: false  # 是否启用京东API（设置为true启用）
+    app-key: f48c063173f717ca8422070adc9d7ecc0befd290bacb3e1e4d91bd2fb67f6d1e459cb28920b52b68  # 京东应用Key
+    app-secret: ${JD_APP_SECRET:}  # 京东应用Secret
+    site-id: ${JD_SITE_ID:}  # 推广位ID
+
+# 定时任务配置
+price-update:
+  # 价格更新定时任务 cron表达式（默认每2小时执行一次）
+  # 格式: 秒 分 时 日 月 周
+  # 示例: 0 0 */2 * * ? 表示每2小时整点执行
+  cron: 0 0 */2 * * ?
+
+promotion-url-update:
+  # 推广链接更新定时任务 cron表达式（默认每天凌晨3点执行）
+  cron: 0 0 3 * * ?
+
+logging:
+  level:
+    root: INFO
+
+springdoc:
+  api-docs:
+    path: /api-docs          # OpenAPI 文档 JSON 地址
+  swagger-ui:
+    path: /swagger-ui        # Swagger UI 访问路径
+    operationsSorter: method
+    tagsSorter: alpha
