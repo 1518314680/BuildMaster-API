@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Spring ai alibaba LLM 配置
  * @author valley
+ * 2025年11月17日23:09:36
  */
 @Configuration
 public class SaaLLMConfig {
