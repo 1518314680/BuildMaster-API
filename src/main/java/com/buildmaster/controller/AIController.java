@@ -4,9 +4,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatModel;
-import org.springframework.ai.ollama.OllamaChatModel;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 
@@ -25,6 +24,15 @@ public class AIController {
     //    @Resource + @Qualifier("ollamaChatModel") = @Resource(name = "ollamaChatModel")
     @Resource //对话模型
     private ChatModel chatModel;
+
+//    private final ChatClient dashScopeChatClient;
+
+    /**
+     * ChatClient 依赖 ChatModel
+     */
+//    public AIController(ChatModel dashScopeChatModel) {
+//        this.dashScopeChatClient = ChatClient.builder(dashScopeChatModel).build();
+//    }
 
     @GetMapping("/hello/doChat")
     public String doChat(@RequestParam(name = "msg", defaultValue = "你是谁") String msg) {
